@@ -1,0 +1,239 @@
+/*
+ *
+ * @fontface
+ * NEAU PLAK
+ *
+ */
+
+@font-face {
+  font-family: 'Neue Plak';
+  src: url('https://cdn.ady.systems/typeface/NeuePlak-Regular.eot');
+  src: local('Neue Plak'), local('NeuePlak-Regular'),
+    url('https://cdn.ady.systems/typeface/NeuePlak-Regular.eot?#iefix') format('embedded-opentype'),
+    url('https://cdn.ady.systems/typeface/NeuePlak-Regular.woff2') format('woff2'),
+    url('https://cdn.ady.systems/typeface/NeuePlak-Regular.woff') format('woff'),
+    url('https://cdn.ady.systems/typeface/NeuePlak-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Neue Plak';
+  src: url('https://cdn.ady.systems/typeface/NeuePlak-Bold.eot');
+  src: local('Neue Plak Bold'), local('NeuePlak-Bold'),
+    url('https://cdn.ady.systems/typeface/NeuePlak-Bold.eot?#iefix') format('embedded-opentype'),
+    url('https://cdn.ady.systems/typeface/NeuePlak-Bold.woff2') format('woff2'),
+    url('https://cdn.ady.systems/typeface/NeuePlak-Bold.woff') format('woff'),
+    url('https://cdn.ady.systems/typeface/NeuePlak-Bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Neue Plak';
+  src: url('https://cdn.ady.systems/typeface/NeuePlak-SemiBold.eot');
+  src: local('Neue Plak SemiBold'), local('NeuePlak-SemiBold'),
+    url('https://cdn.ady.systems/typeface/NeuePlak-SemiBold.eot?#iefix') format('embedded-opentype'),
+    url('https://cdn.ady.systems/typeface/NeuePlak-SemiBold.woff2') format('woff2'),
+    url('https://cdn.ady.systems/typeface/NeuePlak-SemiBold.woff') format('woff'),
+    url('https://cdn.ady.systems/typeface/NeuePlak-SemiBold.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Neue Plak';
+  src: url('https://cdn.ady.systems/typeface/NeuePlak-Black.eot');
+  src: local('Neue Plak Black'), local('NeuePlak-Black'),
+    url('https://cdn.ady.systems/typeface/NeuePlak-Black.eot?#iefix') format('embedded-opentype'),
+    url('https://cdn.ady.systems/typeface/NeuePlak-Black.woff2') format('woff2'),
+    url('https://cdn.ady.systems/typeface/NeuePlak-Black.woff') format('woff'),
+    url('https://cdn.ady.systems/typeface/NeuePlak-Black.ttf') format('truetype');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Neue Plak Extra';
+  src: url('https://cdn.ady.systems/typeface/NeuePlak-ExtraBlack.eot');
+  src: local('Neue Plak Extra Black'), local('NeuePlak-ExtraBlack'),
+    url('https://cdn.ady.systems/typeface/NeuePlak-ExtraBlack.eot?#iefix')
+      format('embedded-opentype'),
+    url('https://cdn.ady.systems/typeface/NeuePlak-ExtraBlack.woff2') format('woff2'),
+    url('https://cdn.ady.systems/typeface/NeuePlak-ExtraBlack.woff') format('woff'),
+    url('https://cdn.ady.systems/typeface/NeuePlak-ExtraBlack.ttf') format('truetype');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+/*
+ *
+ * @fontface
+ * NEAU PLAK Extended
+ *
+ */
+
+@font-face {
+  font-family: 'Neue Plak Extended';
+  src: url('https://cdn.ady.systems/typeface/NeuePlak-ExtendedBold.eot');
+  src: local('Neue Plak Extended Bold'), local('NeuePlak-ExtendedBold'),
+    url('https://cdn.ady.systems/typeface/NeuePlak-ExtendedBold.eot?#iefix')
+      format('embedded-opentype'),
+    url('https://cdn.ady.systems/typeface/NeuePlak-ExtendedBold.woff2') format('woff2'),
+    url('https://cdn.ady.systems/typeface/NeuePlak-ExtendedBold.woff') format('woff'),
+    url('https://cdn.ady.systems/typeface/NeuePlak-ExtendedBold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Neue Plak Extended';
+  src: url('https://cdn.ady.systems/typeface/NeuePlak-ExtendedBlack.eot');
+  src: local('Neue Plak Extended Black'), local('NeuePlak-ExtendedBlack'),
+    url('https://cdn.ady.systems/typeface/NeuePlak-ExtendedBlack.eot?#iefix')
+      format('embedded-opentype'),
+    url('https://cdn.ady.systems/typeface/NeuePlak-ExtendedBlack.woff2') format('woff2'),
+    url('https://cdn.ady.systems/typeface/NeuePlak-ExtendedBlack.woff') format('woff'),
+    url('https://cdn.ady.systems/typeface/NeuePlak-ExtendedBlack.ttf') format('truetype');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Neue Plak Extended';
+  src: url('https://cdn.ady.systems/typeface/NeuePlak-ExtendedLight.eot');
+  src: local('Neue Plak Extended Light'), local('NeuePlak-ExtendedLight'),
+    url('https://cdn.ady.systems/typeface/NeuePlak-ExtendedLight.eot?#iefix')
+      format('embedded-opentype'),
+    url('https://cdn.ady.systems/typeface/NeuePlak-ExtendedLight.woff2') format('woff2'),
+    url('https://cdn.ady.systems/typeface/NeuePlak-ExtendedLight.woff') format('woff'),
+    url('https://cdn.ady.systems/typeface/NeuePlak-ExtendedLight.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Neue Plak Extended Semi';
+  src: url('https://cdn.ady.systems/typeface/NeuePlak-ExtendedSemiBold.eot');
+  src: local('Neue Plak Extended Semi Bold'), local('NeuePlak-ExtendedSemiBold'),
+    url('https://cdn.ady.systems/typeface/NeuePlak-ExtendedSemiBold.eot?#iefix')
+      format('embedded-opentype'),
+    url('https://cdn.ady.systems/typeface/NeuePlak-ExtendedSemiBold.woff2') format('woff2'),
+    url('https://cdn.ady.systems/typeface/NeuePlak-ExtendedSemiBold.woff') format('woff'),
+    url('https://cdn.ady.systems/typeface/NeuePlak-ExtendedSemiBold.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Neue Plak Extended';
+  src: url('https://cdn.ady.systems/typeface/NeuePlak-ExtendedRegular.eot');
+  src: local('Neue Plak Extended'), local('NeuePlak-ExtendedRegular'),
+    url('https://cdn.ady.systems/typeface/NeuePlak-ExtendedRegular.eot?#iefix')
+      format('embedded-opentype'),
+    url('https://cdn.ady.systems/typeface/NeuePlak-ExtendedRegular.woff2') format('woff2'),
+    url('https://cdn.ady.systems/typeface/NeuePlak-ExtendedRegular.woff') format('woff'),
+    url('https://cdn.ady.systems/typeface/NeuePlak-ExtendedRegular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Neue Plak Extended Extra';
+  src: url('https://cdn.ady.systems/typeface/NeuePlak-ExtendedExtraBlack.eot');
+  src: local('Neue Plak Extended Extra Black'), local('NeuePlak-ExtendedExtraBlack'),
+    url('https://cdn.ady.systems/typeface/NeuePlak-ExtendedExtraBlack.eot?#iefix')
+      format('embedded-opentype'),
+    url('https://cdn.ady.systems/typeface/NeuePlak-ExtendedExtraBlack.woff2') format('woff2'),
+    url('https://cdn.ady.systems/typeface/NeuePlak-ExtendedExtraBlack.woff') format('woff'),
+    url('https://cdn.ady.systems/typeface/NeuePlak-ExtendedExtraBlack.ttf') format('truetype');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+/*
+ *
+ * @fontface
+ * NEAU PLAK Wide
+ *
+ */
+
+@font-face {
+  font-family: 'Neue Plak Wide';
+  src: url('https://cdn.ady.systems/typeface/NeuePlak-WideBold.eot');
+  src: local('Neue Plak Wide Bold'), local('NeuePlak-WideBold'),
+    url('https://cdn.ady.systems/typeface/NeuePlak-WideBold.eot?#iefix') format('embedded-opentype'),
+    url('https://cdn.ady.systems/typeface/NeuePlak-WideBold.woff2') format('woff2'),
+    url('https://cdn.ady.systems/typeface/NeuePlak-WideBold.woff') format('woff'),
+    url('https://cdn.ady.systems/typeface/NeuePlak-WideBold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Neue Plak Wide Extra';
+  src: url('https://cdn.ady.systems/typeface/NeuePlak-WideExtraBlack.eot');
+  src: local('Neue Plak Wide Extra Black'), local('NeuePlak-WideExtraBlack'),
+    url('https://cdn.ady.systems/typeface/NeuePlak-WideExtraBlack.eot?#iefix')
+      format('embedded-opentype'),
+    url('https://cdn.ady.systems/typeface/NeuePlak-WideExtraBlack.woff2') format('woff2'),
+    url('https://cdn.ady.systems/typeface/NeuePlak-WideExtraBlack.woff') format('woff'),
+    url('https://cdn.ady.systems/typeface/NeuePlak-WideExtraBlack.ttf') format('truetype');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Neue Plak Wide';
+  src: url('https://cdn.ady.systems/typeface/NeuePlak-WideRegular.eot');
+  src: local('Neue Plak Wide'), local('NeuePlak-WideRegular'),
+    url('https://cdn.ady.systems/typeface/NeuePlak-WideRegular.eot?#iefix')
+      format('embedded-opentype'),
+    url('https://cdn.ady.systems/typeface/NeuePlak-WideRegular.woff2') format('woff2'),
+    url('https://cdn.ady.systems/typeface/NeuePlak-WideRegular.woff') format('woff'),
+    url('https://cdn.ady.systems/typeface/NeuePlak-WideRegular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Neue Plak Wide';
+  src: url('https://cdn.ady.systems/typeface/NeuePlak-WideSemiBold.eot');
+  src: local('Neue Plak Wide Semi Bold'), local('NeuePlak-WideSemiBold'),
+    url('https://cdn.ady.systems/typeface/NeuePlak-WideSemiBold.eot?#iefix')
+      format('embedded-opentype'),
+    url('https://cdn.ady.systems/typeface/NeuePlak-WideSemiBold.woff2') format('woff2'),
+    url('https://cdn.ady.systems/typeface/NeuePlak-WideSemiBold.woff') format('woff'),
+    url('https://cdn.ady.systems/typeface/NeuePlak-WideSemiBold.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Neue Plak Wide';
+  src: url('https://cdn.ady.systems/typeface/NeuePlak-WideBlack.eot');
+  src: local('Neue Plak Wide Black'), local('NeuePlak-WideBlack'),
+    url('https://cdn.ady.systems/typeface/NeuePlak-WideBlack.eot?#iefix')
+      format('embedded-opentype'),
+    url('https://cdn.ady.systems/typeface/NeuePlak-WideBlack.woff2') format('woff2'),
+    url('https://cdn.ady.systems/typeface/NeuePlak-WideBlack.woff') format('woff'),
+    url('https://cdn.ady.systems/typeface/NeuePlak-WideBlack.ttf') format('truetype');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
