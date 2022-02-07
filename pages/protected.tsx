@@ -31,6 +31,9 @@ export default function Protected({ user }) {
         <Code size="4" css={{ color: '$blue8' }}>
           {user.email}
         </Code>
+        <Code size="4" css={{ color: '$blue8' }}>
+          {user.name}
+        </Code>
       </Container>
     </CenterBox>
   );

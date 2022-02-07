@@ -19,22 +19,17 @@ const Container = styled('div', {
 });
 
 export default function Login() {
+  const [profile, setProfile] = useState(null);
   const [session, setSession] = useState(null);
 
-  useEffect(() => {
-    setSession(supabase.auth.session());
-
-    supabase.auth.onAuthStateChange((_event, session) => {
-      setSession(session);
-    });
-  }, []);
-
-  console.log(session);
-
   async function signInWithTwitter() {
-    await supabase.auth.signIn({
+    const { user, session, error } = await supabase.auth.signIn({
       provider: 'twitter',
     });
+  }
+
+  async function signout() {
+    const { error } = await supabase.auth.signOut();
   }
 
   return (
@@ -62,7 +57,7 @@ export default function Login() {
               Sign in with Twitter
             </Heading>
 
-            <SmallButton onClick={signInWithTwitter}>Twitter sign in</SmallButton>
+            <SmallButton onClick={signInWithTwitter}>Sign in</SmallButton>
           </Container>
         </>
       )}

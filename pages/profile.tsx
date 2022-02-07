@@ -5,6 +5,7 @@ import { Box } from '@system/box';
 import { Heading } from '@system/heading';
 import { SmallButton } from '@components/AtelierButton';
 import { Code } from '@system/code';
+import Image from 'next/image';
 
 import { styled } from 'stitches.config';
 
@@ -38,7 +39,8 @@ const Profile = () => {
 
   async function fetchProfile() {
     const profileData = await supabase.auth.user();
-    console.log('profileData: ', profileData);
+    console.log('profileData:', profileData);
+
     if (!profileData) {
       router.push('/sign-in');
     } else {
@@ -50,8 +52,8 @@ const Profile = () => {
     await supabase.auth.signOut();
     router.push('/sign-in');
   }
-
   if (!profile) return null;
+
   return (
     <Box css={{ height: '100vh' }}>
       <Container>
@@ -61,6 +63,9 @@ const Profile = () => {
 
         <Code size="4" css={{ color: '$blue8' }}>
           User ID: {profile.id}
+          <br />
+          <br />
+          Name: {profile.name}
         </Code>
 
         <Box css={{ maxWidth: '300px' }}>
@@ -73,3 +78,19 @@ const Profile = () => {
 };
 
 export default Profile;
+
+/*
+ *
+ * avatar_url: "https://pbs.twimg.com/profile_images/1488712757042163717/ip-GWf55_normal.jpg"
+ * email: "chvndler.ch@gmail.com"
+ * email_verified: true
+ * full_name: "chan"
+ * iss: "https://api.twitter.com/1.1/account/verify_credentials.json"
+ * name: "chan"
+ * picture: "https://pbs.twimg.com/profile_images/1488712757042163717/ip-GWf55_normal.jpg"
+ * preferred_username: "chv_ndler"
+ * provider_id: "431305665"
+ * sub: "431305665"
+ * user_name: "chv_ndler"
+ *
+ */
