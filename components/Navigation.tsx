@@ -54,12 +54,14 @@ export const Navigation = () => {
       authListener.unsubscribe();
     };
   }, []);
+
   async function checkUser() {
     const user = await supabase.auth.user();
     if (user) {
       setAuthenticatedState('authenticated');
     }
   }
+
   async function handleAuthChange(event, session) {
     await fetch('/api/auth', {
       method: 'POST',
@@ -81,6 +83,12 @@ export const Navigation = () => {
         <Link href="/profile" passHref>
           <LinkStyle>
             <a>Profile</a>
+          </LinkStyle>
+        </Link>
+
+        <Link href="/login" passHref>
+          <LinkStyle>
+            <a>Twitter</a>
           </LinkStyle>
         </Link>
 

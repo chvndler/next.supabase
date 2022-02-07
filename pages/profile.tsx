@@ -1,13 +1,32 @@
 import { useState, useEffect } from 'react';
-import { supabase } from '../client';
+import { supabase } from 'client';
 import { useRouter } from 'next/router';
+import { Box } from '@system/box';
+import { Heading } from '@system/heading';
+import { SmallButton } from '@components/AtelierButton';
+import { Code } from '@system/code';
+
+import { styled } from 'stitches.config';
+
+const Container = styled('div', {
+  minHeight: '100vh',
+  padding: '0 0.5rem',
+  display: 'flex',
+  flexDirection: 'column',
+  justifyContent: 'center',
+  alignItems: 'center',
+  height: '100vh',
+  width: 'auto',
+});
 
 const Profile = () => {
   const [profile, setProfile] = useState(null);
   const router = useRouter();
+
   useEffect(() => {
     fetchProfile();
   }, []);
+
   async function update() {
     const { user, error } = await supabase.auth.update({
       data: {
@@ -16,6 +35,7 @@ const Profile = () => {
     });
     console.log('user:', user);
   }
+
   async function fetchProfile() {
     const profileData = await supabase.auth.user();
     console.log('profileData: ', profileData);
@@ -25,18 +45,30 @@ const Profile = () => {
       setProfile(profileData);
     }
   }
+
   async function signOut() {
     await supabase.auth.signOut();
     router.push('/sign-in');
   }
+
   if (!profile) return null;
   return (
-    <div style={{ maxWidth: '420px', margin: '96px auto' }}>
-      <h2>Hello, {profile.email}</h2>
-      <p>User ID: {profile.id}</p>
-      <button onClick={signOut}>Sign Out</button>
-      <button onClick={update}>Set Attribute</button>
-    </div>
+    <Box css={{ height: '100vh' }}>
+      <Container>
+        <Heading size="1" css={{ fontFamily: 'Helvetica', paddingBottom: '20px' }}>
+          Hello, {profile.email}
+        </Heading>
+
+        <Code size="4" css={{ color: '$blue8' }}>
+          User ID: {profile.id}
+        </Code>
+
+        <Box css={{ maxWidth: '300px' }}>
+          <SmallButton onClick={signOut}>Sign out</SmallButton>
+          <SmallButton onClick={update}>Sign in</SmallButton>
+        </Box>
+      </Container>
+    </Box>
   );
 };
 
