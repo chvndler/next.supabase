@@ -78,19 +78,3 @@ const Profile = () => {
 };
 
 export default Profile;
-
-/*
- *
- * avatar_url: "https://pbs.twimg.com/profile_images/1488712757042163717/ip-GWf55_normal.jpg"
- * email: "chvndler.ch@gmail.com"
- * email_verified: true
- * full_name: "chan"
- * iss: "https://api.twitter.com/1.1/account/verify_credentials.json"
- * name: "chan"
- * picture: "https://pbs.twimg.com/profile_images/1488712757042163717/ip-GWf55_normal.jpg"
- * preferred_username: "chv_ndler"
- * provider_id: "431305665"
- * sub: "431305665"
- * user_name: "chv_ndler"
- *
- */
