@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import styles from '../styles/Home.module.css';
 import { TextField } from '@system/text-field';
-import { Button } from '@components/AtelierButton';
+import { AtelierButton } from '@components/AtelierButton';
 import { Heading } from '@system/heading';
 import { Container } from '@system/container';
 import { Box } from '@system/box';
@@ -40,7 +40,7 @@ export default function SignIn() {
   if (submitted) {
     return (
       <Container size="3">
-        <Heading size="1" css={{ fontFamily: 'Helvetica', paddingBottom: '20px' }}>
+        <Heading size="1" css={{ fontFamily: 'Helvetica', paddingBottom: '20px', color: '$gray12' }}>
           Please check your email to sign in.
         </Heading>
       </Container>
@@ -54,9 +54,11 @@ export default function SignIn() {
           Sign in
         </Heading>
 
-        <Container size="3">
+        <Container size="3" css={{ color: '$gray12' }}>
           <TextField size="3" onChange={e => setEmail(e.target.value)} placeholder="Enter email address" />
-          <Button onClick={() => signIn()}>Sign in</Button>
+          <AtelierButton color="lime" onClick={() => signIn()}>
+            Sign in
+          </AtelierButton>
         </Container>
       </CenterBox>
     </Box>
