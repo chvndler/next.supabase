@@ -11,6 +11,8 @@
   "dependencies": {
     "@radix-ui/colors": "^0.1.8",
     "@radix-ui/number": "^0.1.0",
+    "@radix-ui/react-icons": "^1.0.3",
+    "@radix-ui/react-switch": "^0.1.4",
     "@stitches/core": "^1.2.6",
     "@stitches/react": "^1.2.6",
     "@supabase/supabase-js": "^1.30.0",

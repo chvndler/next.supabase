@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { supabase } from '@lib/client';
 import { useRouter } from 'next/router';
+import { ThemeSwitch } from '@components/ThemeSwitch';
 
 import { styled } from 'stitches.config';
 
@@ -91,6 +92,8 @@ export const Navigation = () => {
             <a>Twitter</a>
           </LinkStyle>
         </Link>
+
+        <ThemeSwitch />
 
         {authenticatedState === 'not-authenticated' && (
           <Link href="/sign-in" passHref>

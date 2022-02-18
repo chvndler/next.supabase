@@ -6,7 +6,7 @@ import { useState, useEffect } from 'react';
 import { supabase } from '@lib/client';
 
 // FUNCTIONS
-import { Navigation } from '@components/Navigation';
+import { Navbar } from '@components/Navbar';
 import { ThemeProvider } from 'next-themes';
 import { useTheme } from 'next-themes';
 import { useRouter } from 'next/router';
@@ -100,7 +100,7 @@ const App = ({ Component, pageProps }: AppProps) => {
           display: 'flex',
           flexDirection: 'column',
         })}>
-        <Navigation />
+        <Navbar />
         <Component {...pageProps} />
       </div>
     </ThemeProvider>

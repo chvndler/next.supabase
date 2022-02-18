@@ -5,6 +5,7 @@ import { Heading } from '@system/heading';
 import { Container } from '@system/container';
 import { Box } from '@system/box';
 import { SmallButton } from '@components/AtelierButton';
+import { GradientButton, AtelierButton } from '@components/AtelierButton';
 import { SmallSpacer } from '@components/SmallSpacer';
 
 import { supabase } from '@lib/client';
@@ -19,133 +20,6 @@ const CenterBox = styled('div', {
   justifyContent: 'center',
   alignItems: 'center',
   height: '100vh',
-});
-
-const CustomButton = styled('button', {
-  // Custom
-  fontFamily: '$inter',
-  fontSize: '12px',
-  fontWeight: 500,
-  fontVariantNumeric: 'tabular-nums',
-
-  '&:disabled': {
-    backgroundColor: '$slate2',
-    boxShadow: 'inset 0 0 0 1px $colors$slate7',
-    color: '$slate8',
-    pointerEvents: 'none',
-  },
-
-  // SIZE
-  variants: {
-    size: {
-      '3': {
-        borderRadius: '12px',
-        width: '100%',
-        height: '34px',
-        fontSize: '12px',
-        px: '$4',
-        backgroundColor: '$blue8',
-        '&:hover': {
-          curser: 'pointer',
-        },
-      },
-      '4': {
-        borderRadius: '12px',
-        width: '100%',
-        height: '34px',
-        fontSize: '13px',
-        px: '$3',
-
-        '&:hover': {
-          curser: 'pointer',
-        },
-      },
-    },
-
-    // COLOR
-    variant: {
-      gray: {
-        border: '1px solod $slate5',
-        backgroundColor: '$loContrast',
-        boxShadow: 'inset 0 0 0 1px $colors$slate7',
-        color: '$hiContrast',
-        '@hover': {
-          '&:hover': {
-            boxShadow: 'inset 0 0 0 1px $colors$slate8',
-          },
-        },
-        '&:active': {
-          backgroundColor: '$slate2',
-          boxShadow: 'inset 0 0 0 1px $colors$slate8',
-        },
-        '&:focus': {
-          boxShadow: 'inset 0 0 0 1px $colors$slate8, 0 0 0 1px $colors$slate8',
-        },
-        '&[data-radix-popover-trigger][data-state="open"], &[data-radix-dropdown-menu-trigger][data-state="open"]': {
-          backgroundColor: '$slate4',
-          boxShadow: 'inset 0 0 0 1px $colors$slate8',
-        },
-      },
-      ghost: {
-        backgroundColor: 'transparent',
-        color: 'inherit',
-      },
-    },
-
-    // STATE
-    state: {
-      // ACTIVE
-      active: {
-        backgroundColor: '$slate4',
-        boxShadow: 'inset 0 0 0 1px $colors$slate8',
-        color: '$slate11',
-        '@hover': {
-          '&:hover': {
-            backgroundColor: '$slate5',
-            boxShadow: 'inset 0 0 0 1px $colors$slate8',
-          },
-        },
-        '&:active': {
-          backgroundColor: '$slate5',
-        },
-        '&:focus': {
-          boxShadow: 'inset 0 0 0 1px $colors$slate8, 0 0 0 1px $colors$slate8',
-        },
-      },
-
-      // LOADING
-      waiting: {
-        backgroundColor: '$slate4',
-        boxShadow: 'inset 0 0 0 1px $colors$slate8',
-        color: 'transparent',
-        pointerEvents: 'none',
-        '@hover': {
-          '&:hover': {
-            backgroundColor: '$slate5',
-            boxShadow: 'inset 0 0 0 1px $colors$slate8',
-          },
-        },
-        '&:active': {
-          backgroundColor: '$slate5',
-        },
-        '&:focus': {
-          boxShadow: 'inset 0 0 0 1px $colors$slate8',
-        },
-      },
-    },
-    ghost: {
-      true: {
-        backgroundColor: 'transparent',
-        color: '$slate8',
-        boxShadow: 'none',
-      },
-    },
-  },
-
-  defaultVariants: {
-    size: '1',
-    variant: 'gray',
-  },
 });
 
 export default function SignIn() {
@@ -201,17 +75,15 @@ export default function SignIn() {
 
         <Container size="3" css={{ color: '$gray12' }}>
           <TextField size="3" onChange={e => setEmail(e.target.value)} placeholder="Enter email address" />
-          <CustomButton size="4" onClick={() => signIn()}>
-            Sign in
-          </CustomButton>
+          <GradientButton onClick={() => signIn()}>Sign in</GradientButton>
         </Container>
 
         <SmallSpacer />
 
         <Container size="3" css={{ alignItems: 'center', textAlign: 'center' }}>
-          <CustomButton size="3" onClick={signInWithTwitter}>
+          <AtelierButton color="blue" size="3" onClick={signInWithTwitter}>
             Sign in with Twitter
-          </CustomButton>
+          </AtelierButton>
         </Container>
       </CenterBox>
     </Box>

@@ -58,6 +58,15 @@ export const button = css({
           color: '$white',
         },
       },
+      blue: {
+        backgroundColor: '$blue8',
+        color: '$white',
+
+        '&:hover': {
+          backgroundColor: '$blue9',
+          color: '$white',
+        },
+      },
       orange: {
         backgroundColor: '$orange9',
         color: '$white',
@@ -239,6 +248,7 @@ export const styledGradientButton = css({
   inclue: ['box'],
   all: 'unset',
   alignItems: 'center',
+  textAlign: 'center',
   userSelect: 'none',
   // zIndex: '5',
 
@@ -246,8 +256,6 @@ export const styledGradientButton = css({
 
   // BASE STYLES
   position: 'relative',
-  paddingLeft: '14px',
-  paddingRight: '14px',
   paddingTop: '2px',
   paddingBottom: '2px',
   height: '26px',
@@ -255,13 +263,7 @@ export const styledGradientButton = css({
   border: 'none',
   borderColor: '$gray12',
   lineHeight: 'normal',
-  width: 'auto',
-
-  // MARGINS
-  marginRight: '6px',
-  marginLeft: '6px',
-  marginTop: '6px',
-  marginBottom: '6px',
+  width: '100%',
 
   // BUTTON TEXT
   fontSize: '12px',
