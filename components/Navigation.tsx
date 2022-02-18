@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { supabase } from 'client';
+import { supabase } from '@lib/client';
 import { useRouter } from 'next/router';
 
 import { styled } from 'stitches.config';

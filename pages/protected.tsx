@@ -1,4 +1,4 @@
-import { supabase } from 'client';
+import { supabase } from '@lib/client';
 
 import { Container } from '@system/container';
 import { Heading } from '@system/heading';

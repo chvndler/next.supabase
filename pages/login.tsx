@@ -1,6 +1,6 @@
 import React from 'react';
 import { useState, useEffect } from 'react';
-import { supabase } from 'client';
+import { supabase } from '@lib/client';
 
 import { Box } from '@system/box';
 import { Heading } from '@system/heading';

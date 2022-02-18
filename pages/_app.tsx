@@ -3,7 +3,7 @@ import Head from 'next/head';
 import Link from 'next/link';
 import { AppProps } from 'next/app';
 import { useState, useEffect } from 'react';
-import { supabase } from 'client';
+import { supabase } from '@lib/client';
 
 // FUNCTIONS
 import { Navigation } from '@components/Navigation';
