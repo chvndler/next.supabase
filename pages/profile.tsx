@@ -31,7 +31,7 @@ const Profile = () => {
   async function update() {
     const { user, error } = await supabase.auth.update({
       data: {
-        city: 'New York',
+        city,
       },
     });
     console.log('user:', user);
@@ -70,7 +70,7 @@ const Profile = () => {
 
         <Box css={{ maxWidth: '300px' }}>
           <SmallButton onClick={signOut}>Sign out</SmallButton>
-          <SmallButton onClick={update}>Sign in</SmallButton>
+          <SmallButton onClick={update}>Update</SmallButton>
         </Box>
       </Container>
     </Box>

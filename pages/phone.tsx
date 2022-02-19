@@ -30,16 +30,15 @@ const CenterBox = styled('div', {
 
 export default function SignIn() {
   // EMAIL
-  const [email, setEmail] = useState(null);
   const [phone, setPhone] = useState(null);
   const [submitted, setSubmitted] = useState(false);
   const [session, setSession] = useState(null);
 
   // AUTH HANDLERS
-  // Magic Link
-  async function signIn() {
-    const { user, session, error } = await supabase.auth.signIn({
-      email,
+  // Magic Link SMS
+  async function signUp() {
+    const { user, session, error } = await supabase.auth.signUp({
+      phone,
     });
 
     if (error) {
@@ -47,20 +46,6 @@ export default function SignIn() {
     } else {
       setSubmitted(true);
     }
-  }
-
-  // Continue with Twitter
-  async function signInWithTwitter() {
-    const { user, session, error } = await supabase.auth.signIn({
-      provider: 'twitter',
-    });
-  }
-
-  // Continue with GitHub
-  async function signInWithGithub() {
-    const { user, session, error } = await supabase.auth.signIn({
-      provider: 'github',
-    });
   }
 
   async function signOut() {
@@ -93,29 +78,17 @@ export default function SignIn() {
     <Box css={{ height: '100vh' }}>
       <CenterBox>
         <Heading size="3" css={{ fontFamily: '$inter', paddingBottom: '20px' }}>
-          Sign in
+          Sign in with your phone number.
         </Heading>
 
         <Container size="3" css={{ color: '$gray12' }}>
-          <TextField size="2" onChange={e => setEmail(e.target.value)} type="email" placeholder="Enter email address" />
-          <AtelierButton color="atelier" onClick={() => signIn()}>
+          <TextField size="2" onChange={e => setPhone(e.target.value)} type="text" placeholder="Phone number" />
+          <AtelierButton color="atelier" onClick={() => signUp()}>
             Submit <ChevronRightIcon />
           </AtelierButton>
         </Container>
 
         <SmallSpacer />
-
-        <Container size="3" css={{ alignItems: 'center', textAlign: 'center' }}>
-          <AtelierButton color="twitter" size="3" onClick={signInWithTwitter}>
-            <TwitterLogoIcon /> Continue with Twitter
-          </AtelierButton>
-        </Container>
-
-        <Container size="3" css={{ alignItems: 'center', textAlign: 'center', paddingTop: '6px' }}>
-          <AtelierButton color="github" size="3" onClick={signInWithGithub}>
-            <GitHubLogoIcon /> Continue with GitHub
-          </AtelierButton>
-        </Container>
       </CenterBox>
     </Box>
   );
