@@ -1,5 +1,22 @@
 import { useState } from 'react';
+import { TextField } from '@system/text-field';
+import { Section } from '@system/section';
+import { Box } from '@system/box';
+import { Container } from '@system/container';
+import { AtelierButton } from '@components/AtelierButton';
 import { supabase } from '@lib/client';
+
+import { styled } from 'stitches.config';
+
+const CenterBox = styled('div', {
+  minHeight: '100vh',
+  padding: '0 0.5rem',
+  display: 'flex',
+  flexDirection: 'column',
+  justifyContent: 'center',
+  alignItems: 'center',
+  height: '100vh',
+});
 
 export default function Auth() {
   const [loading, setLoading] = useState(false);
@@ -19,21 +36,20 @@ export default function Auth() {
   };
 
   return (
-    <div className="row flex flex-center">
-      <div className="col-6 form-widget">
-        <h1 className="header">Supabase + Next.js</h1>
-        <p className="description">Sign in via magic link with your email below</p>
-        <div>
-          <input
-            className="inputField"
+    <Box css={{ height: '100vh' }}>
+      <CenterBox>
+        <Box>
+          <TextField
+            size="2"
             type="email"
             placeholder="Your email"
             value={email}
             onChange={e => setEmail(e.target.value)}
           />
-        </div>
-        <div>
-          <button
+        </Box>
+        <Box>
+          <AtelierButton
+            color="lime"
             onClick={e => {
               e.preventDefault();
               handleLogin(email);
@@ -41,9 +57,9 @@ export default function Auth() {
             className="button block"
             disabled={loading}>
             <span>{loading ? 'Loading' : 'Send magic link'}</span>
-          </button>
-        </div>
-      </div>
-    </div>
+          </AtelierButton>
+        </Box>
+      </CenterBox>
+    </Box>
   );
 }

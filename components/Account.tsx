@@ -4,6 +4,7 @@ import { TextField } from '@system/text-field';
 import { Section } from '@system/section';
 import { Container } from '@system/container';
 import { AtelierButton } from '@components/AtelierButton';
+import Label from '@components/Label';
 import RadixAvatar from '@components/RadixAvatar';
 
 const Account = ({ session }) => {
@@ -72,22 +73,27 @@ const Account = ({ session }) => {
 
   return (
     <div className="form-widget">
+      <Section size="1" css={{ alignItems: 'center', textAlign: 'center' }}>
+        <Container size="3" css={{ alignItems: 'center', textAlign: 'center', position: 'relative', margin: 'auto' }}>
+          <RadixAvatar
+            url={avatar_url}
+            size={150}
+            onUpload={url => {
+              setAvatarUrl(url);
+              updateProfile({ username, website, avatar_url: url });
+            }}
+          />
+        </Container>
+      </Section>
+
       <Section size="1">
-        <RadixAvatar
-          url={avatar_url}
-          size={150}
-          onUpload={url => {
-            setAvatarUrl(url);
-            updateProfile({ username, website, avatar_url: url });
-          }}
-        />
-        <Container size="3">
+        <Container size="3" css={{ maxWidth: '400px' }}>
           <div>
-            <label htmlFor="email">Email</label>
+            <Label>Email</Label>
             <TextField size="2" id="email" type="text" value={session.user.email} disabled />
           </div>
           <div>
-            <label htmlFor="username">Name</label>
+            <Label>Name</Label>
             <TextField
               size="2"
               id="username"
@@ -97,7 +103,7 @@ const Account = ({ session }) => {
             />
           </div>
           <div>
-            <label htmlFor="website">Website</label>
+            <Label>Website</Label>
             <TextField
               size="2"
               id="website"
