@@ -106,10 +106,10 @@ export const TextField = styled('input', {
         px: '$3',
         width: '100%',
         lineHeight: '$sizes$5',
+
         '&:-webkit-autofill::first-line': {
           fontSize: '13px',
         },
-
         '&:focus': {
           backgroundColor: '$loContrast',
           boxShadow: 'inset 0px 0px 0px 2px $colors$lime9, 0px 0px 0px 1px $colors$lime9',

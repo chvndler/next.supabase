@@ -28,13 +28,7 @@ export const button = css({
   border: 'none',
   borderColor: '$gray12',
   lineHeight: 'normal',
-  width: 'auto',
-
-  // MARGINS
-  marginRight: '6px',
-  marginLeft: '1px',
-  marginTop: '0px',
-  marginBottom: '0px',
+  // width: 'auto',
 
   // BUTTON TEXT
   fontSize: '13px',
@@ -49,6 +43,7 @@ export const button = css({
 
   variants: {
     color: {
+      // LIME
       lime: {
         backgroundColor: '$lime9',
         color: '$white',
@@ -58,6 +53,7 @@ export const button = css({
           color: '$white',
         },
       },
+      // BLUE
       blue: {
         backgroundColor: '$blue8',
         color: '$white',
@@ -67,10 +63,12 @@ export const button = css({
           color: '$white',
         },
       },
+      // ORANGE
       orange: {
         backgroundColor: '$orange9',
         color: '$white',
       },
+      // GHOST
       ghost: {
         backgroundColor: '$translucent',
         color: '$gray11',
@@ -79,6 +77,96 @@ export const button = css({
         '&:hover': {
           backgroundColor: '$slate5',
           color: '$gray11',
+        },
+      },
+
+      // Social Providers
+      twitter: {
+        backgroundColor: '#1DA1F2',
+        color: '$white',
+        borderRadius: '8px',
+        fontSize: '12px',
+        paddingLeft: '18px',
+        paddingRight: '18px',
+        paddingTop: '6px',
+        paddingBottom: '6px',
+        width: '150px',
+        alignSelf: 'stretch',
+        lineHeight: 'normal',
+
+        '&:hover': {
+          backgroundColor: '#1DA1F2',
+          color: '$gray12',
+        },
+      },
+      github: {
+        backgroundColor: '#6cc644',
+        color: '$white',
+        borderRadius: '8px',
+        fontSize: '12px',
+        paddingLeft: '18px',
+        paddingRight: '18px',
+        paddingTop: '6px',
+        paddingBottom: '6px',
+        width: '150px',
+        alignSelf: 'stretch',
+        lineHeight: 'normal',
+
+        '&:hover': {
+          backgroundColor: '#6cc644',
+          color: '$gray12',
+        },
+      },
+      apple: {
+        backgroundColor: '#000',
+        color: '$white',
+        borderRadius: '8px',
+        fontSize: '12px',
+        paddingLeft: '18px',
+        paddingRight: '18px',
+        paddingTop: '6px',
+        paddingBottom: '6px',
+        width: '150px',
+        alignSelf: 'stretch',
+        lineHeight: 'normal',
+
+        '&:hover': {
+          backgroundColor: '#000',
+          color: '$white',
+        },
+      },
+      // ATELIER
+      atelier: {
+        // RESET
+        inclue: ['box'],
+        all: 'unset',
+        alignItems: 'center',
+        textAlign: 'center',
+        userSelect: 'none',
+
+        backgroundColor: '$translucent',
+        color: '$gray12',
+
+        // Base Styles
+        fontSize: '14px',
+        fontWeight: '700',
+        position: 'relative',
+        paddingTop: '2px',
+        paddingBottom: '2px',
+        height: '26px',
+        borderRadius: '7px',
+        border: 'none',
+        borderColor: '$gray12',
+        lineHeight: 'normal',
+        width: '100%',
+        paddingX: 'auto',
+
+        margin: 'auto',
+        textAlign: 'center',
+
+        '&:hover': {
+          backgroundColor: '$translucent',
+          color: '$mauve9',
         },
       },
     },

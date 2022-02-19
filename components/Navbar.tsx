@@ -141,37 +141,28 @@ export const Navbar = () => {
             },
           }}>
           <NextLink href="/profile" passHref>
-            <Link variant="subtle" css={{ marginRight: '$3', color: '$gray12', '@sm': { marginRight: '$2' } }}>
-              Profile <CaretRightIcon />
-            </Link>
-          </NextLink>
-
-          <NextLink href="/login" passHref>
-            <Link variant="subtle" css={{ marginRight: '$3', color: '$gray12', '@sm': { marginRight: '$2' } }}>
-              tweet
+            <Link variant="subtle" css={{ marginRight: '$4', color: '$gray12', '@sm': { marginRight: '$2' } }}>
+              Profile
             </Link>
           </NextLink>
 
           <NextLink href="/protected" passHref>
-            <Link variant="subtle" css={{ marginRight: '$3', color: '$gray12', '@sm': { marginRight: '$2' } }}>
+            <Link variant="subtle" css={{ marginRight: '$4', color: '$gray12', '@sm': { marginRight: '$2' } }}>
               Protected
             </Link>
           </NextLink>
 
           {authenticatedState === 'not-authenticated' && (
-            <NextLink href="https://developer.ady.world" passHref>
-              <LinkStyle>
-                <a>Sign In</a>
-              </LinkStyle>
+            <NextLink href="/sign-in" passHref>
+              <Link variant="subtle" css={{ marginRight: '$4', color: '$gray12', '@sm': { marginRight: '$2' } }}>
+                Get Started
+              </Link>
             </NextLink>
           )}
         </Flex>
         {/* <!-- JSX ELEMENT --> */}
 
         <Flex as="nav" css={{ ai: 'center', px: '0px', fontFamily: '$inter', fontSize: '12px' }}>
-          {/* <!-- THEME SWITCH --> */}
-          <ThemeSwitch />
-
           {/* <!-- JSX ELEMENT --> */}
           <Link
             href="/sign-in"
@@ -184,14 +175,17 @@ export const Navbar = () => {
               borderRadius: '6px',
               paddingTop: '6px',
               paddingBottom: '6px',
-              paddingLeft: '10px',
-              paddingRight: '10px',
+              paddingLeft: '2px',
+              paddingRight: '2px',
               mr: '$3',
-              '@sm': { display: 'none', mr: '$3' },
+              '@sm': { display: 'none', mr: '$2' },
               '&:hover': { cursor: 'pointer' },
             }}>
-            Sign in
+            Log in
           </Link>
+
+          {/* <!-- THEME SWITCH --> */}
+          <ThemeSwitch />
           {/* <!--
           <PopoverPanel />
           -->*/}
