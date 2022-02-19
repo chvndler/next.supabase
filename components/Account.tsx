@@ -3,6 +3,7 @@ import { supabase } from '@lib/client';
 import { TextField } from '@system/text-field';
 import { Section } from '@system/section';
 import { Container } from '@system/container';
+import { AtelierButton } from '@components/AtelierButton';
 import RadixAvatar from '@components/RadixAvatar';
 
 const Account = ({ session }) => {
@@ -106,20 +107,19 @@ const Account = ({ session }) => {
             />
           </div>
 
-          <div>
-            <button
-              className="button block primary"
+          <Container size="3">
+            <AtelierButton
+              color="lime"
+              css={{ margin: '3px' }}
               onClick={() => updateProfile({ username, website, avatar_url })}
               disabled={loading}>
               {loading ? 'Loading ...' : 'Update'}
-            </button>
-          </div>
+            </AtelierButton>
 
-          <div>
-            <button className="button block" onClick={() => supabase.auth.signOut()}>
+            <AtelierButton color="lime" css={{ margin: '3px' }} onClick={() => supabase.auth.signOut()}>
               Sign Out
-            </button>
-          </div>
+            </AtelierButton>
+          </Container>
         </Container>
       </Section>
     </div>
