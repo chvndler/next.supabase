@@ -116,12 +116,6 @@ export default function SignIn() {
             <GitHubLogoIcon /> Continue with GitHub
           </AtelierButton>
         </Container>
-
-        <Container size="3" css={{ alignItems: 'center', textAlign: 'center', paddingTop: '6px' }}>
-          <AtelierButton color="apple" size="3" onClick={signInWithGithub}>
-            <BsApple /> Continue with Apple
-          </AtelierButton>
-        </Container>
       </CenterBox>
     </Box>
   );

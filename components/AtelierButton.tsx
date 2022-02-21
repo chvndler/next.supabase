@@ -83,7 +83,7 @@ export const button = css({
       // Social Providers
       twitter: {
         fontFamily: '$untitled',
-        height: '30px',
+        height: '26px',
         backgroundColor: '#1DA1F2',
         color: '$white',
         borderRadius: '6px',
@@ -102,7 +102,8 @@ export const button = css({
         },
       },
       github: {
-        height: '30px',
+        fontFamily: '$untitled',
+        height: '26px',
         backgroundColor: '#6cc644',
         color: '$white',
         borderRadius: '6px',
@@ -121,7 +122,8 @@ export const button = css({
         },
       },
       apple: {
-        height: '30px',
+        fontFamily: '$untitled',
+        height: '26px',
         backgroundColor: '#000',
         color: '$white',
         borderRadius: '6px',
