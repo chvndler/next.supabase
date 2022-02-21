@@ -12,7 +12,7 @@ import { Card } from '@components/Card';
 import { ChevronRightIcon } from '@radix-ui/react-icons';
 import { TwitterLogoIcon } from '@radix-ui/react-icons';
 import { GitHubLogoIcon } from '@radix-ui/react-icons';
-import appleLogoIcon from '@public/Apple.svg';
+import { BsApple } from 'react-icons/bs';
 
 import { supabase } from '@lib/client';
 
@@ -114,6 +114,12 @@ export default function SignIn() {
         <Container size="3" css={{ alignItems: 'center', textAlign: 'center', paddingTop: '6px' }}>
           <AtelierButton color="github" size="3" onClick={signInWithGithub}>
             <GitHubLogoIcon /> Continue with GitHub
+          </AtelierButton>
+        </Container>
+
+        <Container size="3" css={{ alignItems: 'center', textAlign: 'center', paddingTop: '6px' }}>
+          <AtelierButton color="apple" size="3" onClick={signInWithGithub}>
+            <BsApple /> Continue with Apple
           </AtelierButton>
         </Container>
       </CenterBox>
