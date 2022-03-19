@@ -12,6 +12,7 @@ import { useTheme } from 'next-themes';
 import { useRouter } from 'next/router';
 import { css, globalCss, darkTheme } from 'stitches.config';
 import { reset } from '@styles/reset';
+
 // MAIN STYLE IMPORTS
 import '@styles/inter.css';
 import '@styles/jetbrains.css';
